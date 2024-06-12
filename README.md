@@ -17,6 +17,7 @@ Adapter is based on ATtiny25 microcontroller, but PCB layout and firmware source
 
 There are two variants of PCB layout: with PS/2 and USB mouse socket. Both they have one-layer one-side design without VIA covering and fully ready even for manual tracing.
 ![PCBs](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/InfoPage/PCBs.jpg?raw=true)
+
 They are fully identical except an mouse socket type.
 
 Note what USB version does not provide true USB host. The USB socket is only used as built-in PS/2-to-USB passive adapter.
@@ -26,6 +27,7 @@ Note what USB version does not provide true USB host. The USB socket is only use
 Only universal USB+PS/2 mouse will work!
 
 ![Gaming VS Simple](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/InfoPage/gaming_simple.webp?raw=true)
+
 Usually it is a simple office mouse with two buttons and one clickable wheel.
 
 Jumper is used to switch 3-button mouse protocol extensions between Microsoft and Logitech style. The 1-2 position (close to the mouse socket) mean Microsoft, 2-3 respectively Logitech. Jumper is hotplug-ready.
