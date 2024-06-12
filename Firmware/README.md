@@ -9,13 +9,15 @@ Please see [Defines.h](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/Firmwa
 ## FUSES
 
 ### RTS-only fuses
-
+```
 efuse 0x01
 lfuse 0xc1
 hfuse 0xdf
+```
 
-#### RTS-DTR fuses
-
+### RTS-DTR fuses
+```
 efuse 0x01
 lfuse 0xc1
 hfuse 0x7f
+```
