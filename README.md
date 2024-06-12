@@ -1,4 +1,4 @@
-# PS2-Serial-Mouse
+# PS2 to Serial mouse adapter
 Active adapter for connect PS/2 mouse to the RS232C serial port.
 
 ![Adapters photo](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/InfoPage/devs.jpg?raw=true)
