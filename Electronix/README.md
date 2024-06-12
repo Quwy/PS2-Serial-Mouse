@@ -12,7 +12,7 @@ Schematic diagrams and PCB layouts for both PS/2 and USB adapter variants.
 
 ## Differences between RTS-only and RTS-DTR implementations.
 
-**RTS-only** implementation listen only RTS line of the RS232C port to detect init/reset signal from the mouse driver. The DTR line is ignored. This mean not full compliance with Serial Mouse specs, but enough to most existing mouse drivers. But it does give an opportunity to preserve pin 1 of microcontroller as default RESET function and use simple and cheap ISP programmers (such as [USBASP](https://www.google.com/search?q=usbasp)) to flash IC.
+**RTS-only** implementation listen only RTS line of the RS232C port to detect init/reset signal from the mouse driver. The DTR line is ignored. This mean not full compliance with Serial Mouse specs, but enough for most existing mouse drivers. But it does give an opportunity to preserve pin 1 of microcontroller as default RESET function and use simple and cheap ISP programmers (such as [USBASP](https://www.google.com/search?q=usbasp)) to flash IC.
 
 In this mode resistor R4 must **NOT** be installed on PCB, and there is recommended to install resistor R1 as RESET pull-up.
 
