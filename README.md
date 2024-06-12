@@ -32,4 +32,6 @@ Usually it is a simple office mouse with two buttons and one clickable wheel.
 
 Jumper is used to switch 3-button mouse protocol extensions between Microsoft and Logitech style. The 1-2 position (close to the mouse socket) mean Microsoft, 2-3 respectively Logitech. Jumper is hotplug-ready.
 
-Since RS232C port does not provide power supply enougt to feed most of PS/2 mouses, the standart "floppy-style" 4-pin MOLEX plug is used as power source (+5V line only).
+Since RS232C port does not provide power supply enough to feed most of PS/2 mouses, the standart "floppy-style" 4-pin MOLEX plug is used as power source (+5V line only).
+
+Please see also [README of schematic diagramm](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/Electronix/README.md) and [README of firmware section](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/Firmware/README.md).
