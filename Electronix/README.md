@@ -21,3 +21,7 @@ In this mode resistor R4 must **NOT** be installed on PCB, and there is recommen
 For RTS-DTR mode resistor R4 (0-10 Ohm or jumper wire) must be installed to PCB and R1 must **NOT** be installed.
 
 Everything else is same in both modes.
+
+## Circuit features
+
+In the both PS/2 and USB layouts socket shield is used as signal ground trace for connect mouse GND pin to adapter ground. For this reason only metal sockets must be used. Especially it concerns a PS/2 which wide available in the whole-plastic variant without an metal shield.
