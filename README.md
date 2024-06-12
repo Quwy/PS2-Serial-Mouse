@@ -16,6 +16,7 @@ With this adapter you don't need to search and buy rare and expensive old serial
 Adapter is based on ATtiny25 microcontroller, but PCB layout and firmware source are fully compatible with whole 25/45/85 series without any changes.
 
 There are two variants of PCB layout: with PS/2 and USB mouse socket. Both they have one-layer one-side design without VIA covering and fully ready even for manual tracing.
+
 ![PCBs](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/InfoPage/PCBs.jpg?raw=true)
 
 They are fully identical except an mouse socket type.
