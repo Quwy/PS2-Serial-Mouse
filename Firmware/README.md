@@ -8,7 +8,7 @@ Please see [Defines.h](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/Firmwa
 
 ## FUSES
 
-About differences between RTS-only and RTS-DTR implementations please see [electronics section](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/Electronix/README.md).
+About differences between RTS-only and RTS+DTR implementations please see [electronics section](https://github.com/Quwy/PS2-Serial-Mouse/blob/main/Electronix/README.md).
 
 ### RTS-only fuses
 ```
@@ -17,7 +17,7 @@ lfuse 0xc1
 hfuse 0xdf
 ```
 
-### RTS-DTR fuses
+### RTS+DTR fuses
 ```
 efuse 0x01
 lfuse 0xc1
