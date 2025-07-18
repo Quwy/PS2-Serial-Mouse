@@ -53,7 +53,15 @@ static void ps2_mouse_stop(void) {
 static void ps2_mouse_start(void) {
     ps2_abort(); // clear all buffers before start
     
-    #ifndef UART_9600_BPS
+    #ifdef UART_HI_BPS
+    #ifndef UART_19200_BPS
+    //ps2_tx(0xF3); // set report rate command
+    //ps2_tx(90); // in the 9600-bps mode ?? reports per second fit into UART bandwidth without drops
+    #else
+    //ps2_tx(0xF3); // set report rate command
+    //ps2_tx(180); // in the 19200-bps mode 180 reports per second fit into UART bandwidth without drops
+    #endif
+    #else
     ps2_tx(0xF3); // set report rate command
     ps2_tx(20); // in the 1200-bps mode only 20 reports per second fit into UART bandwidth without drops
     #endif

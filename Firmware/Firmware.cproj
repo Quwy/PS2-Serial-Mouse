@@ -40,8 +40,9 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
-    <avrtoolserialnumber>J42700048601</avrtoolserialnumber>
+    <avrtool>com.atmel.avrdbg.tool.stk500</avrtool>
+    <avrtoolserialnumber>
+    </avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x1E9108</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_stk500>
       <ToolOptions>
@@ -54,7 +55,7 @@
       </ToolNumber>
       <ToolName>STK500</ToolName>
     </com_atmel_avrdbg_tool_stk500>
-    <avrtoolinterface>debugWIRE</avrtoolinterface>
+    <avrtoolinterface>HVSP</avrtoolinterface>
     <com_atmel_avrdbg_tool_atmelice>
       <ToolOptions>
         <InterfaceProperties>

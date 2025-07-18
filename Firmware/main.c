@@ -142,7 +142,7 @@ int main(void) {
 
     #else
 
-    #ifndef UART_9600_BPS
+    #ifndef UART_HI_BPS
     ps2_tx(0xF3); // set report rate
     ps2_tx(20); // in 1200 bps mode only 20 reports per second fit into UART bandwidth
     #endif

@@ -11,12 +11,13 @@
 #define DEFINES_H_
 
 /* VERSION */
-#define VERSION "1.00b" // not used in the code, just text tag
+#define VERSION "1.10" // not used in the code, just text tag
 
 /* UART SECTION */
-//#define UART_9600_BPS // define for 9600 bps, otherwise 1200 bps wiil used. note what 9600 bps is not common and will not work with most mouse drivers
+//#define UART_HI_BPS // define for 9600/19200 bps, otherwise 1200 bps will used. note what high bps is not common and will not work with most mouse drivers
+//#define UART_19200_BPS // define for 19200 bps in UART_HI_BPS mode (otherwise 9600 bps will used)
 #define BUTTONS     3 // assume 3-button mouse (no risk if 2-button mouse attached)
-//#define RESET_AS_DTR // define if pin 1 (RESET/PB5) used as GPIO for DTR line input
+#define RESET_AS_DTR  // define if pin 1 (RESET/PB5) used as GPIO for DTR line input
 
 /* FUSES SECTION */
 // these values not used in the code, but will useful to configure microcontroller

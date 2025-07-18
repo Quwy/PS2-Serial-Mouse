@@ -19,7 +19,16 @@
 #include "BufProc.h"
 
 #define UART_TX_BUFFER_SIZE (4 * 3) // 3 packets of 3-button mouse or 4 packets of 2-button mouse
-#define UART_BPS_CORRECTION 8 // measured on the real hardware
+
+#ifdef UART_HI_BPS
+  #ifndef UART_19200_BPS
+    #define UART_BPS_CORRECTION (-1) // measured on the real hardware
+  #else
+    #define UART_BPS_CORRECTION (-2) // measured on the real hardware
+  #endif
+#else
+  #define UART_BPS_CORRECTION (+8) // measured on the real hardware
+#endif
 
 typedef enum {
     UART_STAGE_IDLE,
@@ -60,10 +69,15 @@ static inline void uart_init(void) {
 // start UART timer
 static void uart_start_timer(void) {
     TCNT0 = 0; // reset timer counter
-    OCR0A = 208 + UART_BPS_CORRECTION; // set top value for 9600 bps (2 000 000 / 9 600) or 1200 bps (250 000 / 1200) = 208 (plus correction from the real device sample)
-    #ifdef UART_9600_BPS
+    #ifdef UART_HI_BPS
+    #ifndef UART_19200_BPS
+    OCR0A = 208 + UART_BPS_CORRECTION; // set top value for 9600 bps (2 000 000 / 9 600) = 208 (plus correction from the real device sample)
+    #else
+    OCR0A = 104 + UART_BPS_CORRECTION; // set top value for 19200 bps (2 000 000 / 19200) = 104 (plus correction from the real device sample)
+    #endif
     TCCR0B |= (1 << CS01); // start timer with prescaler /8 (16 000 000 / 8 = 2 000 000 increments/sec)
     #else
+    OCR0A = 208 + UART_BPS_CORRECTION; // set top value for 1200 bps (250 000 / 1200) = 208 (plus correction from the real device sample)
     TCCR0B |= (1 << CS00) | (1 << CS01); // start timer with prescaler /64 (16 000 000 / 64 = 250 000 increments/sec)
     #endif
 }
